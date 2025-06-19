@@ -1,0 +1,37 @@
+package pages
+
+import "github.com/keypeearr/romanizer/src/views/props"
+import "github.com/keypeearr/romanizer/src/views/layouts"
+import "strings"
+
+templ Romanizer(p props.RomanizerPageProps) {
+	@layouts.Main(p.Main) {
+		<div class="romanizer-container" hx-ext="response-targets">
+			<span class="romanizer-logo">
+				ROMANIZER
+			</span>
+			<div class="romanizer-form">
+				@RomanizerInput(p.Alpha)
+				<div class="arrow-symbol">↔</div>
+				@RomanizerInput(p.Roman)
+			</div>
+			<div class="romanizer-error"></div>
+		</div>
+	}
+}
+
+templ RomanizerInput(p props.RomanizerInputProps) {
+	<input
+		type="text"
+		name={ p.Name }
+		class={ p.Class }
+		value={ p.Value }
+		{ p.Attrs... }
+	/>
+}
+
+templ RomanizerError(err error) {
+	<div class="romanizer-error">
+		{ strings.ToTitle(err.Error()) }
+	</div>
+}

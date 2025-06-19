@@ -1,0 +1,83 @@
+html,
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100%;
+}
+
+.romanizer-container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.romanizer-logo {
+    font-size: 10vw;
+    font-weight: bolder;
+    background-image: url('./roman-empire.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+}
+
+.romanizer-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 5vw;
+}
+
+.arrow-symbol {
+    display: flex;
+    font-size: 5vw;
+}
+
+input {
+    font-size: 3vw;
+    max-height: 4vw;
+    border: 4px solid black;
+    border-radius: 10px;
+    padding: 1rem 2rem 1rem 2rem;
+    text-align: center;
+    max-width: 400px;
+}
+
+.romanizer-alpha-input {}
+
+.romanizer-roman-input {}
+
+.romanizer-error {
+    color: white;
+    font-size: 2vw;
+    border: solid 1px red;
+    border-radius: 10px;
+    padding: 1vw 2vw 1vw 2vw;
+    background: lightcoral;
+    animation: hiding 0s ease-in 5s forwards;
+}
+
+.romanizer-error:empty {
+    display: none;
+}
+
+@keyframes hiding {
+    to {
+        height: 0%;
+        width: 0%;
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes hiding {
+    to {
+        height: 0%;
+        width: 0%;
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
