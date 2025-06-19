@@ -1,5 +1,5 @@
 # Romanizer
-- A simple app that displays a numerical number as Roman Numerals
+- A simple app that displays a Alphanumeric numbers as Roman Numerals and vice versa
 
 # Installation
 1. Clone the repository
@@ -11,10 +11,11 @@
 2. Open the application on your browser using the [url](https://localhost:7331/romanizer)
 
 # Technologies I used:
-1. [Go]()
+1. [Go](https://go.dev/)
 2. [Go Fiber v3](https://docs.gofiber.io/next/) for the server
 3. [Templ](https://templ.guide/) for the UI
 4. [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) for styling the UI 
+5. [HTMX](https://htmx.org/)
 
 # References:
 1. [Roman Numeral to Alpha Numeric Algorithm](https://freshman.tech/snippets/go/roman-numerals/)
